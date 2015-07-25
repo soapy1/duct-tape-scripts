@@ -1,0 +1,12 @@
+[user]
+	email = scastellarin95@gmail.com
+	name = sophia
+  author = scastellarin95@gmail.com
+[core]
+	editor = vim
+[alias]
+  update-origin-master = !git fetch upstream && git push origin upstream/master:master
+   pr = "!f() { git fetch upstream +refs/pull/$1/head:pr/$1; } ; f"
+[color "branch"]
+  remote = yellow
+
