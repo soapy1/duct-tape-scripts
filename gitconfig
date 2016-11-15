@@ -6,7 +6,12 @@
 	editor = vim
 [alias]
   update-origin-master = !git fetch upstream && git push origin upstream/master:master
-   pr = "!f() { git fetch upstream +refs/pull/$1/head:pr/$1; } ; f"
+  pr = "!f() { git fetch upstream +refs/pull/$1/head:pr/$1; } ; f"
+  pom = !git pull origin master
+  tree = !git log --graph --oneline --all
+  st = !git status --short --branch
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+  update-branch-name = "!f() { git branch -m $1; } ; f"
 [color "branch"]
   remote = yellow
 
