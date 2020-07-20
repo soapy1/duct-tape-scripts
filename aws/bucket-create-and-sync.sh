@@ -15,7 +15,7 @@ read DELETE_BUCKET
 
 if [ $DELETE_BUCKET == "yes" ]; then
   echo "deleting $SOURCE_BUCKET"
-  aws s3 rb s3://$SOURCE_BUCKET --force
+  aws s3 rm s3://$SOURCE_BUCKET --force
 else
   echo "NOT deleting"
 fi
