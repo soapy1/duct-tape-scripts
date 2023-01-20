@@ -1,0 +1,11 @@
+alias bo='go'
+alias og='go'
+alias gti='git'
+alias tgi='git'
+alias igt='git'
+alias use='conda activate'
+alias esu='conda deactivate'
+alias fuck='sudo $(history -1 | cut -c 8-)'
+alias sugo='sudo'
+alias tf='terraform'
+alias list-go-modules=go list -deps -f '{{define "M"}}{{.Path}}@{{.Version}}{{end}}{{with .Module}}{{if not .Main}}{{if .Replace}}{{template "M" .Replace}}{{else}}{{template "M" .}}{{end}}{{end}}{{end}}' | sort -u
